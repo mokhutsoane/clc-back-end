@@ -1,9 +1,14 @@
 <p>To start the project</p>
 Install as per [documentation](https://laravel.com/docs)
 
-<strong>Run: </strong> \
-npm install && npm run build\
-composer run dev 
+ 
+    git clone https://github.com/mokhutsoane/clc-back-end.git
+    cd clc-back-end
+    npm install && npm run build
+    composer run dev
+
+
+
 
 
 
