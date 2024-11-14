@@ -39,7 +39,7 @@ class AuthController extends Controller
                 'message' => 'Invalid Credentials'
             ], 401);
         }
-        $token = $user->createToken($request->name);
+        $token = $user->createToken($request->email);
         return response()->json([
             'user' => $user,
             'token' => $token->plainTextToken
@@ -50,6 +50,13 @@ class AuthController extends Controller
         $request->user()->tokens()->delete();
         return response()->json([
             "message" => "logged out"
+        ]);
+    }
+    public function show(Request $request)
+    {
+        $user = $request->user();
+        return response()->json([
+            'user' => $user,
         ]);
     }
 }

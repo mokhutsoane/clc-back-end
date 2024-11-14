@@ -70,7 +70,8 @@ class HouseController extends Controller
         $houseData =  $request->validate([
             'address' => 'string|max:255',
             'description' => 'string',
-            'geolocation' => 'json',
+            'latitude' => 'string',
+    'longitude'=>'string'
         ]);
         $user = $request->user();
         $house = House::find($id);
